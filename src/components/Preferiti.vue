@@ -1,7 +1,7 @@
 <template>
-
+ <h1 >Preferiti</h1>
     <div class="container" style="display: flex; flex-wrap: wrap;">
-        <ProductCard v-for="product in this.preferiti" v-model:name="product.name"  v-model:price="product.price" v-model:discount="product.discount" v-model:mpn="product.mpn" v-model:color="product.color" v-model:brandname="product.brandname" v-model:image="product.image" ></ProductCard>
+        <ProductCard @preferiti="this.getFavourites()" v-for="product in this.preferiti" v-model:name="product.name"  v-model:price="product.price" v-model:discount="product.discount" v-model:mpn="product.mpn" v-model:color="product.color" v-model:brandname="product.brandname" v-model:image="product.image" ></ProductCard>
      
     </div>
 
@@ -25,7 +25,10 @@ export default {
     console.log("preferiti: " + this.preferiti)
   },
   methods:{
-     
+     getFavourites(){
+      console.log("")
+      this.preferiti = this.$cookies.get('favourites')
+     }
   },
   components:{
     ProductCard

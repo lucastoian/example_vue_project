@@ -70,6 +70,7 @@
                       this.isFavourite = false;
                       favourites.splice(i,1)
                       this.$cookies.set('favourites', favourites)
+                      this.$emit('preferiti')
                       return;
                   }
               }
