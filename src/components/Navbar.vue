@@ -14,17 +14,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8081/?genere=M">Uomo</a>
+        <a class="nav-link" href="https://main.d2eyid9zcx9ppl.amplifyapp.com/?genere=M">Uomo</a>
         </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8081/?genere=F">Donna</a>
+        <a class="nav-link" href="https://main.d2eyid9zcx9ppl.amplifyapp.com/?genere=F">Donna</a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Brands
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li v-for="brand in brands"><a class="dropdown-item" :href="'http://localhost:8081/?brand=' + brand.name ">{{ brand.name }}</a></li>
+            <li v-for="brand in brands"><a class="dropdown-item" :href="'https://main.d2eyid9zcx9ppl.amplifyapp.com/?brand=' + brand.name ">{{ brand.name }}</a></li>
             
           </ul>
 
@@ -35,12 +35,12 @@
           </a>
       
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li v-for="category in categories"><a class="dropdown-item" :href="'http://localhost:8081/?category=' + category.name " >{{ category.name }}</a></li>
+            <li v-for="category in categories"><a class="dropdown-item" :href="'https://main.d2eyid9zcx9ppl.amplifyapp.com/?category=' + category.name " >{{ category.name }}</a></li>
             
           </ul>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8081/preferiti">Preferiti</a>
+        <a class="nav-link" href="https://main.d2eyid9zcx9ppl.amplifyapp.com/preferiti">Preferiti</a>
       </li>
       </ul>
 
