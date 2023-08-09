@@ -1,16 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+  
+  <Navbar></Navbar>
+ <h1 v-if="this.genere === 'M'">Articoli Uomo</h1>
+ <h1 v-else-if="this.genere === 'F'">Articoli Donna</h1>
+ <h1 v-else>Collezione cataldostore</h1>
+  <PLP :genere="this.genere"></PLP>
+
+</div>
+
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/Navbar.vue'
+import PLP from './components/PLP.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Navbar,
+    PLP
+  },
+  created(){
+   this.getParams()
+  },
+  data() {
+        return {
+            genere: null
+        };
+    },
+  methods:{
+    getParams() {
+
+            let queryString = window.location.search;
+            let urlParams = new URLSearchParams(queryString);
+            
+            if( urlParams.has('genere') ){
+                this.genere = urlParams.get('genere').toUpperCase();
+            } 
+
+            console.log("genere getParams: " + this.genere)
+            
+           
+        }
+   }
 }
 </script>
 
@@ -22,5 +57,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1{
+  text-align: left;
+  padding-top: 40px;
 }
 </style>
