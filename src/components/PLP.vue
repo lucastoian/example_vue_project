@@ -100,6 +100,10 @@ import ProductCard from './ProductCard.vue'
         }
     },
     created(){
+        if(this.$cookies.get('favourites') == null){
+            this.$cookies.set('favourites',[])
+        }
+
         this.getParams()
         this.getProducts()
     },

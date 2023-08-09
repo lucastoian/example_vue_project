@@ -39,6 +39,9 @@
             
           </ul>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8081/preferiti">Preferiti</a>
+      </li>
       </ul>
 
     </div>
